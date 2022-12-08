@@ -2,7 +2,9 @@
 
 > Powered by Elixir's Nx/Axon library [Bumblebee](https://github.com/elixir-nx/bumblebee)
 
-Run with `$ elixir run.exs`, and access your app at [http://localhost:4000](http://localhost:4000)
+View the live [demo](https://phx-ml-example.fly.dev).
+
+Run locally with `$ elixir run.exs`, and access your app at [http://localhost:4000](http://localhost:4000)
 
 ## Deploy single file on fly.io
 
