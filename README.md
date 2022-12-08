@@ -4,10 +4,6 @@
 
 Run with `$ elixir run.exs`, and access your app at [http://localhost:4000](http://localhost:4000)
 
-```console
-elixir run.exs
-```
-
 ## Deploy single file on fly.io
 
 First, install the `fly` cli:
