@@ -4,8 +4,7 @@
 
 View the live [demo](https://phx-ml-example.fly.dev).
 
-![2022-12-08 13-56-25 2022-12-08 13_58_57](https://user-images.githubusercontent.com/576796/206543644-bca409f1-a2d9-4519-906c-c6d584f93339.gif)
-
+![shuttle_resized](https://user-images.githubusercontent.com/576796/206545362-c694a38a-9be5-4c21-afe7-41f6a881c2ef.gif)
 
 Run locally with `$ elixir run.exs`, and access your app at [http://localhost:4000](http://localhost:4000)
 
