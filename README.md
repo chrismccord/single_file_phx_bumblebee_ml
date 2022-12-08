@@ -1,6 +1,6 @@
 # Phoenix image classification in a single file
 
-> Powered by Elixir's Nx/Axon library Bumblebee
+> Powered by Elixir's Nx/Axon library [Bumblebee](https://github.com/elixir-nx/bumblebee)
 
 Run with:
 
