@@ -2,7 +2,7 @@
 
 > Powered by Elixir's Nx/Axon library [Bumblebee](https://github.com/elixir-nx/bumblebee)
 
-Run with:
+Run with `$ elixir run.exs`, and access your app at [http://localhost:4000](http://localhost:4000)
 
 ```console
 elixir run.exs
