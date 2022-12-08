@@ -19,7 +19,6 @@ Mix.install([
   {:jason, "~> 1.4"},
   {:phoenix, "~> 1.7.0-rc.0", override: true},
   {:phoenix_live_view, "~> 0.18.3"},
-  # Bumblebee and friends
   {:bumblebee, "~> 0.1.0"},
   {:nx, "~> 0.4.1"},
   {:exla, "~> 0.4.1"}
@@ -85,9 +84,8 @@ defmodule PhoenixDemo.Layouts do
         },
 
         toCanvas(imgEl){
-          // We resize the image, such that it fits in the configured
-          // height x width, but keeping the aspect ratio. We could
-          // also easily crop, pad or squash the image, if desired
+          // We resize the image, such that it fits in the configured height x width, but
+          // keep the aspect ratio. We could also easily crop, pad or squash the image, if desired
           const canvas = document.createElement("canvas")
           const ctx = canvas.getContext("2d")
           const widthScale = this.boundWidth / imgEl.width
@@ -96,7 +94,6 @@ defmodule PhoenixDemo.Layouts do
           canvas.width = Math.round(imgEl.width * scale)
           canvas.height = Math.round(imgEl.height * scale)
           ctx.drawImage(imgEl, 0, 0, imgEl.width, imgEl.height, 0, 0, canvas.width, canvas.height)
-
           return canvas
         },
 
@@ -107,7 +104,6 @@ defmodule PhoenixDemo.Layouts do
           const view = new DataView(meta)
           view.setUint32(0, canvas.height, false)
           view.setUint32(4, canvas.width, false)
-
           return new Blob([meta, buffer], {type: "application/octet-stream"})
         },
 
@@ -122,7 +118,6 @@ defmodule PhoenixDemo.Layouts do
           return bytes.buffer
         }
       }
-
       const liveSocket = new LiveView.LiveSocket("/live", Phoenix.Socket, {hooks: {ImageInput}})
       liveSocket.connect()
     </script>
@@ -240,10 +235,8 @@ defmodule PhoenixDemo.SampleLive do
     data |> Nx.from_binary(:u8) |> Nx.reshape({height, width, 3})
   end
 
+  # We need phx-change and phx-submit on the form for live uploads
   def handle_event("noop", %{}, socket) do
-    # We need phx-change and phx-submit on the form for live uploads,
-    # but we make predictions immediately using :progress, so we just
-    # ignore this event
     {:noreply, socket}
   end
 
