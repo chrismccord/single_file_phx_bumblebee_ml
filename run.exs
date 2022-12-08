@@ -154,7 +154,7 @@ defmodule PhoenixDemo.SampleLive do
         <h1 class="text-slate-900 font-extrabold text-3xl tracking-tight text-center">Elixir image classification demo</h1>
         <p class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto">
           Powered by <a href="https://github.com/elixir-nx/bumblebee" class="font-mono font-medium text-sky-500">Bumblebee</a>,
-          an Nx/Axon library for pre-trained and transformer NN models with 🤗 integration.
+          an Nx/Axon library for pre-trained and transformer NN models with <a href="https://huggingface.co">🤗</a> integration.
           Deployed on <a href="https://fly.io" class="font-mono font-medium text-sky-500">fly.io</a> dedicated-cpu-1x.
         </p>
         <form class="m-0 flex flex-col items-center space-y-2 mt-8" phx-change="noop" phx-submit="noop">
