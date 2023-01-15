@@ -253,6 +253,7 @@ defmodule PhoenixDemo.Router do
 
   pipeline :browser do
     plug(:accepts, ["html"])
+    plug(:put_root_layout, {PhoenixDemo.Layouts, :live})
   end
 
   scope "/", PhoenixDemo do
