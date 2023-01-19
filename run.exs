@@ -240,10 +240,21 @@ defmodule PhoenixDemo.SampleLive do
     {:noreply, socket}
   end
 
-  def handle_info({ref, result}, %{assigns: %{task_ref: ref}} = socket) do
+  def handle_info({ref, result}, %{assigns: %{task_ref: task_ref}} = socket) do
     Process.demonitor(ref, [:flush])
-    %{predictions: [%{label: label}]} = result
-    {:noreply, assign(socket, label: label, running: false)}
+
+    socket =
+      case ref do
+        ^task_ref ->
+          %{predictions: [%{label: label}]} = result
+          assign(socket, label: label)
+
+        # ignore obsolete task results
+        _ ->
+          socket
+      end
+
+    {:noreply, assign(socket, running: false)}
   end
 end
 
